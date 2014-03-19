@@ -1,0 +1,3 @@
+var BattleShip = function(){
+  //controller
+}
