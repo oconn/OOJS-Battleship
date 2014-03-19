@@ -5,10 +5,13 @@ var BattleView = function(){
   };
 
   this.generateShip = function(shipName, shipSize, playerName){
-    console.log(shipName);
     for(var i = 0; i < shipSize; i++){
       $("#" + playerName + "-board .ships ." + shipName).append("<div class='ship-cell'></div>");
     };
   };
 
+  this.resetNames = function(p1Name, p2Name) {
+    $("#player1-board .player-name").html(p1Name);
+    $("#player2-board .player-name").html(p2Name);
+  };
 };

@@ -13,11 +13,11 @@
   padding: 0px;
 }
 
-#player1-board {
+#player1-board .row {
 	background-color: steelblue;
 }
 
-#player2-board {
+#player2-board .row {
 	background-color: gray;
 }
 
@@ -35,13 +35,14 @@
 .col {
 	display: inline-table;
 	width: 35px;
-	border: 1px solid black;
-	height: 35px;
+  outline:1px solid black;
+  height: 35px;
 }
 
 .ship-cell {
   height: 35px;
   width: 35px;
-  background: black;
+  outline: 1px solid red;
+  background-color: black;
   display: inline-table;
 }

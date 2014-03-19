@@ -11,8 +11,9 @@ var BattleShip = function(){
     })
   }
 
-  placeShips = function() {
-
+  placeShips = function(player) {
+    console.log("." + player.getIndex() + '-board');
+    $( '#' + player.getIndex() + '-board .ship').draggable();
   };
 
 
@@ -28,6 +29,9 @@ var BattleShip = function(){
     populateShips(player1);
     populateShips(player2);
 
+    view.resetNames(player1.getName(), player2.getName());
+
     placeShips(player1);
+    // placeShips(player2);
   };
 };
