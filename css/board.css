@@ -1,0 +1,41 @@
+#page-title {
+	text-align: center;
+}
+
+.boards {
+  display: table;
+  width: 100%;
+}
+
+.board {
+  width: 50%;
+  display: inline-table;
+  padding: 0px;
+}
+
+#player1-board {
+	background-color: steelblue;
+}
+
+#player2-board {
+	background-color: gray;
+}
+
+.player-name {
+	text-align: center;
+}
+
+.row {
+	display: table;
+	height: 30px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+.col {
+	display: inline-table;
+	width: 9%;
+	border: 1px solid black;
+	height: 30px;
+}

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>OOJS Battleship</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/board.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js" type="text/javascript"></script>
+  <script src="js/model.js"></script>
+  <script src="js/view.js"></script>
+  <script src="js/controller.js"></script>
+ </head>
+ <body>
+  <h1 id="page-title">Battle Ship</h1>
+
+  <div class="boards">
+	  <div class="board" id="player1-board">
+
+	  	<h2 class="player-name">Player 1</h2>
+	    <div class="row1 row">
+	    	<div class="col col-1"></div>
+	    	<div class="col col-2"></div>
+	    	<div class="col col-3"></div>
+	    	<div class="col col-4"></div>
+	    	<div class="col col-5"></div>
+	    	<div class="col col-6"></div>
+	    	<div class="col col-7"></div>
+	    	<div class="col col-8"></div>
+	    	<div class="col col-9"></div>
+	    	<div class="col col-10"></div>
+	    </div>
+	    <div class="row2 row">
+	    	<div class="col col-1"></div>
+	    	<div class="col col-2"></div>
+	    	<div class="col col-3"></div>
+	    	<div class="col col-4"></div>
+	    	<div class="col col-5"></div>
+	    	<div class="col col-6"></div>
+	    	<div class="col col-7"></div>
+	    	<div class="col col-8"></div>
+	    	<div class="col col-9"></div>
+	    	<div class="col col-10"></div>
+	    </div>
+	    <div class="row3 row">
+	    	<div class="col col-1"></div>
+	    	<div class="col col-2"></div>
+	    	<div class="col col-3"></div>
+	    	<div class="col col-4"></div>
+	    	<div class="col col-5"></div>
+	    	<div class="col col-6"></div>
+	    	<div class="col col-7"></div>
+	    	<div class="col col-8"></div>
+	    	<div class="col col-9"></div>
+	    	<div class="col col-10"></div>
+	    </div>
+	    <div class="row4 row">
+	    	<div class="col col-1"></div>
+	    	<div class="col col-2"></div>
+	    	<div class="col col-3"></div>
+	    	<div class="col col-4"></div>
+	    	<div class="col col-5"></div>
+	    	<div class="col col-6"></div>
+	    	<div class="col col-7"></div>
+	    	<div class="col col-8"></div>
+	    	<div class="col col-9"></div>
+	    	<div class="col col-10"></div>
+	    </div>
+	    <div class="row5 row">
+	    	<div class="col col-1"></div>
+	    	<div class="col col-2"></div>
+	    	<div class="col col-3"></div>
+	    	<div class="col col-4"></div>
+	    	<div class="col col-5"></div>
+	    	<div class="col col-6"></div>
+	    	<div class="col col-7"></div>
+	    	<div class="col col-8"></div>
+	    	<div class="col col-9"></div>
+	    	<div class="col col-10"></div>
+	    </div>
+	    <div class="row6 row">
+	    	<div class="col col-1"></div>
+	    	<div class="col col-2"></div>
+	    	<div class="col col-3"></div>
+	    	<div class="col col-4"></div>
+	    	<div class="col col-5"></div>
+	    	<div class="col col-6"></div>
+	    	<div class="col col-7"></div>
+	    	<div class="col col-8"></div>
+	    	<div class="col col-9"></div>
+	    	<div class="col col-10"></div>
+	    </div>
+	    <div class="row7 row">
+	    	<div class="col col-1"></div>
+	    	<div class="col col-2"></div>
+	    	<div class="col col-3"></div>
+	    	<div class="col col-4"></div>
+	    	<div class="col col-5"></div>
+	    	<div class="col col-6"></div>
+	    	<div class="col col-7"></div>
+	    	<div class="col col-8"></div>
+	    	<div class="col col-9"></div>
+	    	<div class="col col-10"></div>
+	    </div>
+	    <div class="row8 row">
+	    	<div class="col col-1"></div>
+	    	<div class="col col-2"></div>
+	    	<div class="col col-3"></div>
+	    	<div class="col col-4"></div>
+	    	<div class="col col-5"></div>
+	    	<div class="col col-6"></div>
+	    	<div class="col col-7"></div>
+	    	<div class="col col-8"></div>
+	    	<div class="col col-9"></div>
+	    	<div class="col col-10"></div>
+	    </div>
+	    <div class="row9 row">
+	    	<div class="col col-1"></div>
+	    	<div class="col col-2"></div>
+	    	<div class="col col-3"></div>
+	    	<div class="col col-4"></div>
+	    	<div class="col col-5"></div>
+	    	<div class="col col-6"></div>
+	    	<div class="col col-7"></div>
+	    	<div class="col col-8"></div>
+	    	<div class="col col-9"></div>
+	    	<div class="col col-10"></div>
+	    </div>
+	    <div class="row10 row">
+	    	<div class="col col-1"></div>
+	    	<div class="col col-2"></div>
+	    	<div class="col col-3"></div>
+	    	<div class="col col-4"></div>
+	    	<div class="col col-5"></div>
+	    	<div class="col col-6"></div>
+	    	<div class="col col-7"></div>
+	    	<div class="col col-8"></div>
+	    	<div class="col col-9"></div>
+	    	<div class="col col-10"></div>
+	    </div>
+
+	    <div class="ships">
+	    	<div class="destroyer"></div>
+	    	<div class="cruiser"></div>
+	    	<div class="submarine"></div>
+	    	<div class="battleship"></div>
+	    	<div class="aircraft-carrier"></div>
+	    </div>
+	  </div><!-- end of p1 board -->
+
+	  <div class="board" id="player2-board">
+	  	<h2 class="player-name">Player 2</h2>
+
+	    <div class="row1 row">
+	    	<div class="col col-1"></div>
+	    	<div class="col col-2"></div>
+	    	<div class="col col-3"></div>
+	    	<div class="col col-4"></div>
+	    	<div class="col col-5"></div>
+	    	<div class="col col-6"></div>
+	    	<div class="col col-7"></div>
+	    	<div class="col col-8"></div>
+	    	<div class="col col-9"></div>
+	    	<div class="col col-10"></div>
+	    </div>
+	    <div class="row2 row">
+	    	<div class="col col-1"></div>
+	    	<div class="col col-2"></div>
+	    	<div class="col col-3"></div>
+	    	<div class="col col-4"></div>
+	    	<div class="col col-5"></div>
+	    	<div class="col col-6"></div>
+	    	<div class="col col-7"></div>
+	    	<div class="col col-8"></div>
+	    	<div class="col col-9"></div>
+	    	<div class="col col-10"></div>
+	    </div>
+	    <div class="row3 row">
+	    	<div class="col col-1"></div>
+	    	<div class="col col-2"></div>
+	    	<div class="col col-3"></div>
+	    	<div class="col col-4"></div>
+	    	<div class="col col-5"></div>
+	    	<div class="col col-6"></div>
+	    	<div class="col col-7"></div>
+	    	<div class="col col-8"></div>
+	    	<div class="col col-9"></div>
+	    	<div class="col col-10"></div>
+	    </div>
+	    <div class="row4 row">
+	    	<div class="col col-1"></div>
+	    	<div class="col col-2"></div>
+	    	<div class="col col-3"></div>
+	    	<div class="col col-4"></div>
+	    	<div class="col col-5"></div>
+	    	<div class="col col-6"></div>
+	    	<div class="col col-7"></div>
+	    	<div class="col col-8"></div>
+	    	<div class="col col-9"></div>
+	    	<div class="col col-10"></div>
+	    </div>
+	    <div class="row5 row">
+	    	<div class="col col-1"></div>
+	    	<div class="col col-2"></div>
+	    	<div class="col col-3"></div>
+	    	<div class="col col-4"></div>
+	    	<div class="col col-5"></div>
+	    	<div class="col col-6"></div>
+	    	<div class="col col-7"></div>
+	    	<div class="col col-8"></div>
+	    	<div class="col col-9"></div>
+	    	<div class="col col-10"></div>
+	    </div>
+	    <div class="row6 row">
+	    	<div class="col col-1"></div>
+	    	<div class="col col-2"></div>
+	    	<div class="col col-3"></div>
+	    	<div class="col col-4"></div>
+	    	<div class="col col-5"></div>
+	    	<div class="col col-6"></div>
+	    	<div class="col col-7"></div>
+	    	<div class="col col-8"></div>
+	    	<div class="col col-9"></div>
+	    	<div class="col col-10"></div>
+	    </div>
+	    <div class="row7 row">
+	    	<div class="col col-1"></div>
+	    	<div class="col col-2"></div>
+	    	<div class="col col-3"></div>
+	    	<div class="col col-4"></div>
+	    	<div class="col col-5"></div>
+	    	<div class="col col-6"></div>
+	    	<div class="col col-7"></div>
+	    	<div class="col col-8"></div>
+	    	<div class="col col-9"></div>
+	    	<div class="col col-10"></div>
+	    </div>
+	    <div class="row8 row">
+	    	<div class="col col-1"></div>
+	    	<div class="col col-2"></div>
+	    	<div class="col col-3"></div>
+	    	<div class="col col-4"></div>
+	    	<div class="col col-5"></div>
+	    	<div class="col col-6"></div>
+	    	<div class="col col-7"></div>
+	    	<div class="col col-8"></div>
+	    	<div class="col col-9"></div>
+	    	<div class="col col-10"></div>
+	    </div>
+	    <div class="row9 row">
+	    	<div class="col col-1"></div>
+	    	<div class="col col-2"></div>
+	    	<div class="col col-3"></div>
+	    	<div class="col col-4"></div>
+	    	<div class="col col-5"></div>
+	    	<div class="col col-6"></div>
+	    	<div class="col col-7"></div>
+	    	<div class="col col-8"></div>
+	    	<div class="col col-9"></div>
+	    	<div class="col col-10"></div>
+	    </div>
+	    <div class="row10 row">
+	    	<div class="col col-1"></div>
+	    	<div class="col col-2"></div>
+	    	<div class="col col-3"></div>
+	    	<div class="col col-4"></div>
+	    	<div class="col col-5"></div>
+	    	<div class="col col-6"></div>
+	    	<div class="col col-7"></div>
+	    	<div class="col col-8"></div>
+	    	<div class="col col-9"></div>
+	    	<div class="col col-10"></div>
+	    </div>
+
+	    <div class="ships">
+	    	<div class="destroyer"></div>
+	    	<div class="cruiser"></div>
+	    	<div class="submarine"></div>
+	    	<div class="battleship"></div>
+	    	<div class="aircraft-carrier"></div>
+	    </div>
+	  </div><!-- end of p2 board -->
+
+	</div> <!-- end of boards -->
+ </body>
+</html>
